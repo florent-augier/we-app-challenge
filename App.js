@@ -1,14 +1,17 @@
 import React from "react";
-import { StyleSheet, Text, View, LogBox } from "react-native";
-import { SearchBar } from "react-native-elements";
+import Search from "./components/Search";
+import CardUser from "./components/CardUser";
+import { StyleSheet, Text, View, LogBox, SafeAreaView } from "react-native";
+import "react-native-gesture-handler";
 
 LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Search />
+      {/* <CardUser /> */}
+    </SafeAreaView>
   );
 }
 
@@ -16,7 +19,5 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
