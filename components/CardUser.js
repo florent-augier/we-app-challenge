@@ -2,10 +2,6 @@ import React, { useEffect } from "react";
 import { StyleSheet, View, Image, Text } from "react-native";
 
 export default function CardUser({ user }) {
-  useEffect(() => {
-    console.log(user);
-  }, []);
-
   return (
     <View style={styles.card}>
       <Image source={{ uri: user.photo }} style={styles.image} />

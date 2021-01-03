@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import { Input } from "react-native-elements";
 import { MaterialIcons } from "@expo/vector-icons";
 
-export default function Search() {
+export default function Search(props) {
   const [search, setSearch] = useState("");
   const [isEmpty, setIsEmpty] = useState(true);
 
@@ -13,6 +13,7 @@ export default function Search() {
     } else {
       setIsEmpty(true);
     }
+    props.handleSearch(search);
   }, [search]);
 
   return (
