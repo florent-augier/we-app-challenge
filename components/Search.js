@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { Input } from "react-native-elements";
 import { MaterialIcons } from "@expo/vector-icons";
 
