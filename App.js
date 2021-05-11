@@ -19,7 +19,8 @@ export default function App() {
   const handleSearch = function (event) {
     var searchQuery = event.toLowerCase();
     var displayedUsers = allUsers.filter(function (el) {
-      var searchValue = el.first_name.toLowerCase();
+      var searchValue =
+        el.first_name.toLowerCase() + el.last_name.toLocaleLowerCase();
 
       return searchValue.indexOf(searchQuery) !== -1;
     });
